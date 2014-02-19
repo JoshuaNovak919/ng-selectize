@@ -1,5 +1,8 @@
 {
   "name": "ng-selectize-jn919",
+  "main": [
+    "dist/ng-selectize.js"
+  ],
   "version": "0.0.2",
   "dependencies": {
     "selectize": "~0.7.7"
