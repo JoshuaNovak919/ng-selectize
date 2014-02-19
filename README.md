@@ -2,7 +2,7 @@ This is an Angular.js directive for Brian Reavis's selectize jQuery plugin (http
 
 Info
 ====
-Module: 'theaquaNg'
+Module: 'ngSelectize'
 
 Directive: 'selectize'
 
