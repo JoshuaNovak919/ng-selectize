@@ -6,7 +6,17 @@
       restrict: "AE",
       link: function(scope, element, attrs) {
         return $timeout(function() {
-          return $(element).selectize(scope.$eval(attrs.selectize));
+          var elements = element.find("option");
+          var $select = $(element).selectize(scope.$eval(attrs.selectize));
+          
+          scope.$watch(attrs.ngModel, function (val) {
+            if (val !== undefined) {
+              var selected = elements.filter(function () { return $(this).html() == val; }).val();
+              $select[0].selectize.setValue(selected);
+            }
+          });
+          
+          return $select;
         });
       }
     };
